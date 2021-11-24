@@ -12,7 +12,7 @@ npm i @pofo/click-outside
 - [Multiple Refs](#Multiple-Refs)
 - [Customizing Options](#Customizing-Options)
 - [API](#API)
-- [Typescript][#Typescript]
+- [Typescript](#Typescript)
 
 ## 🚀 Features 🚀
 * [x] Call onClick function when user **clicks outside of component**
