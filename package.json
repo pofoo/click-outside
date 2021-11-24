@@ -1,0 +1,20 @@
+{
+  "name": "@pofo/click-outside",
+  "version": "1.0.0",
+  "description": "React click outside ref hook. Handles escape key.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "click outside ref",
+    "escape toggle"
+  ],
+  "author": "pofo",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
