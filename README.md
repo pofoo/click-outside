@@ -94,9 +94,9 @@ useClickOutsideRef(
 
 | Parameter | Description |
 | ----------- | ----------- |
-| onClick: () => void | onClick function that gets called when user clicks off the component. By default, also gets called when user clicks the escape key | 
-options: { enableEscape?: boolean; } | Optional options object. enableEscape: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true. |
-numRefs: number | Specifies number of refs to return in the array.
+| `onClick: () => void` | onClick function that gets called when user clicks off the component. By default, also gets called when user clicks the escape key | 
+`options: { enableEscape?: boolean; }` | Optional options object. enableEscape: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true. |
+`numRefs: number` | Specifies number of refs to return in the array.
 
 ## Typescript
 You can specify what kind of HTML Element your ref is going to be attached to.
