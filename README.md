@@ -9,7 +9,7 @@ Lightweight, accessible, clickoutside React ref
 ## Basic Usage
 Refs are always returned in an array of 1 or more refs.
 
-```
+```typescript
 import { useClickOutisdeRef } from '@pofo/click-outside';
 
 const MyComponent = () => {
@@ -32,7 +32,7 @@ const MyComponent = () => {
 ### Getting More Than One Ref
 If you want more than one ref attached to the same onClick function, specify the number of refs you want.
 
-```
+```typescript
 import { useClickOutisdeRef } from '@pofo/click-outside';
 
 const MyComponent = () => {
@@ -58,7 +58,7 @@ const MyComponent = () => {
 ### Customizing Options
 By default, pressing the escape key will call the onClick function as well. If you wish to disable this functionality, pass an options object with `enableEscape` as `false`.
 
-```
+```typescript
 import { useClickOutisdeRef } from '@pofo/click-outside';
 
 const MyComponent = () => {
@@ -79,7 +79,7 @@ const MyComponent = () => {
 ```
 
 ## API
-```
+```typescript
 useClickOutsideRef(
     // requried
     onClick: () => void,
@@ -95,19 +95,19 @@ useClickOutsideRef(
 | Parameter | Description |
 | ----------- | ----------- |
 | `onClick: () => void` | onClick function that gets called when user clicks off the component. By default, also gets called when user clicks the escape key | 
-`options: { →enableEscape?: boolean; }` | Optional options object. enableEscape: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true. |
+`options: { enableEscape?: boolean; }` | Optional options object. enableEscape: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true. |
 `numRefs: number` | Specifies number of refs to return in the array.
 
 ## Typescript
 You can specify what kind of HTML Element your ref is going to be attached to.
 
-```
+```typescript
 const [ ref ] = useClickOutsideRef<HTMLDivElement>( () => {} );
 ```
 
 If you are returning multiple refs that are different kinds of HTML Elements.
 
-```
+```typescript
 import { RefObject } from 'react';
 import { useClickOutsideRef } from '@pofo/click-outside';
 
