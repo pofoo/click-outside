@@ -117,6 +117,7 @@ const MyComponent = () => {
         // ...do something
     }
 
+    /* CLICKOUTSIDE REF */
     const [ ref1, ref2 ] = useClickOutsideRef( onClick );
 
     return (
