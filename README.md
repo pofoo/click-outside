@@ -8,7 +8,11 @@ npm i @pofo/click-outside
 ```
 
 # Jump Around
-- link: [Basic Usage](#Basic-Usage)
+- [Basic Usage](#Basic-Usage)
+- [Multiple Refs](#Multiple-Refs)
+- [Customizing Options](#Customizing-Options)
+- [API](#API)
+- [Typescript][#Typescript]
 
 ## 🚀 Features 🚀
 * [x] Call onClick function when user **clicks outside of component**
@@ -38,7 +42,7 @@ const MyComponent = () => {
 }
 ```
 
-### Getting More Than One Ref
+### Multiple Refs
 If you want more than one ref attached to the same onClick function, specify the number of refs you want.
 
 ```typescript
