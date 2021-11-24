@@ -8,7 +8,7 @@ npm i @pofo/click-outside
 ```
 
 # Jump Around
-- [Basic Usage](#Basic Usage)
+- link: [Basic Usage](#Basic-Usage)
 
 ## 🚀 Features 🚀
 * [x] Call onClick function when user **clicks outside of component**
