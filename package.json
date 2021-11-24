@@ -17,6 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pre-publish": "yarn clean && yarn build",
     "publish-beta": "yarn publish --access public --tag beta"
   },
   "keywords": [
