@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "module": "src/useClickOutsideRef.ts",
   "repository": "pofo/click-outside",
-  "homepage": "",
+  "homepage": "https://github.com/pofoo/click-outside",
   "author": "pofo",
   "license": "MIT",
   "scripts": {
