@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "React click outside ref hook. Handles escape key.",
   "main": "src/index.ts",
+  "module": "src/useClickOutsideRef.ts",
+  "repository": "pofo/click-outside",
+  "homepage": "",
+  "author": "pofo",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,9 +17,13 @@
     "click outside ref",
     "escape toggle"
   ],
-  "author": "pofo",
-  "license": "MIT",
   "dependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "@types/react": "^17.0.36",
+    "typescript": "^4.5.2"
   }
 }

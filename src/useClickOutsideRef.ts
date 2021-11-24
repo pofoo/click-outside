@@ -12,9 +12,9 @@ type Options = {
  * numRefs only takes positive numbers
  */
 const useClickOutsideRef = <T extends HTMLElement>( 
-    onClick: ( event: PointerEvent | KeyboardEvent ) => void,
-    numRefs: number=1, // this should only be a positive number
+    onClick: () => void,
     options: Options={},
+    numRefs: number=1, // this should only be a positive number
     // TO-DO - the generic T right now assumes that all the refs are going to be the same kind of HTMLElement
 ): RefObject<T>[] => {
 
@@ -38,7 +38,7 @@ const useClickOutsideRef = <T extends HTMLElement>(
                 if ( ref.current.contains( event.target as T ) ) isClicked = true;
             }
             // the HTMLElement was not clicked - call the onClick function
-            if ( !isClicked ) onClick( event );
+            if ( !isClicked ) onClick();
         }
 
         // attaching the clickOutsideFn to all the refs in the refList
@@ -50,12 +50,12 @@ const useClickOutsideRef = <T extends HTMLElement>(
         }, [] );
 
         // options
-        const { enableEscape=null } = options;
+        const { enableEscape=true } = options;
         // call onClick when user presses the escape key
         if ( enableEscape ) {
             const handleEscape = ( event: KeyboardEvent ) => {
                 if ( event.key === 'Escape' ) {
-                    onClick( event );
+                    onClick();
                 }
             }
             // attaching the clickOutsideFn to the escape key
