@@ -2,8 +2,8 @@
   "name": "@pofo/click-outside",
   "version": "1.0.0-beta.2",
   "description": "React click outside ref hook. Handles escape key.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
+  "main": "/dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": "pofoo/click-outside",
   "homepage": "https://github.com/pofoo/click-outside",
   "author": "pofo",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-publish": "yarn clean && yarn build",
+    "pre-publish": "tsc",
     "publish-beta": "yarn publish --access public --tag beta"
   },
   "keywords": [

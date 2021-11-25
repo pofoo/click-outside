@@ -2,7 +2,7 @@
 import { useEffect, useRef, RefObject } from 'react';
 
 /* TYPES */
-type Options = {
+export type Options = {
     enableEscape?: boolean;
 }
 
