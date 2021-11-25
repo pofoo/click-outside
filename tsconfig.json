@@ -2,6 +2,7 @@
     "compilerOptions": {
       "baseUrl": ".",
       "declaration": true,
+      "outDir": "dist",
       "target": "esnext",
       "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
