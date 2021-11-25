@@ -1,8 +1,6 @@
-# REMOVE THIS LATER
-test/
-
 # custom
-.vscode
+.vscode/
+dist/
 
 # Logs
 logs

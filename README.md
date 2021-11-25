@@ -23,7 +23,7 @@ npm i @pofo/click-outside
 Refs are always returned in an array of 1 or more refs.
 
 ```typescript
-import { useClickOutisdeRef } from '@pofo/click-outside';
+import useClickOutisdeRef from '@pofo/click-outside';
 
 const MyComponent = () => {
     
@@ -46,7 +46,7 @@ const MyComponent = () => {
 If you want more than one ref attached to the same onClick function, specify the number of refs you want.
 
 ```typescript
-import { useClickOutisdeRef } from '@pofo/click-outside';
+import useClickOutisdeRef from '@pofo/click-outside';
 
 const MyComponent = () => {
     
@@ -72,7 +72,7 @@ const MyComponent = () => {
 By default, pressing the escape key will call the onClick function as well. If you wish to disable this functionality, pass an options object with `enableEscape` as `false`.
 
 ```typescript
-import { useClickOutisdeRef } from '@pofo/click-outside';
+import useClickOutisdeRef from '@pofo/click-outside';
 
 const MyComponent = () => {
     
@@ -122,7 +122,7 @@ If you are returning multiple refs that are different kinds of HTML Elements.
 
 ```typescript
 import { RefObject } from 'react';
-import { useClickOutsideRef } from '@pofo/click-outside';
+import useClickOutisdeRef from '@pofo/click-outside';
 
 const MyComponent = () => {
 
