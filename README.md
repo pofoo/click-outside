@@ -1,5 +1,5 @@
 # React useClickOutsideRef Hook
-Lightweight, accessible, clickoutside React ref
+Lightweight and accessible clickoutside React ref
 
 ## Install
 ```
@@ -43,7 +43,7 @@ const MyComponent = () => {
 ```
 
 ### Multiple Refs
-If you want more than one ref attached to the same onClick function, specify the number of refs you want.
+If you want more than one ref attached to the same onClick function, specify the number of refs you want in the optional options object.
 
 ```typescript
 import useClickOutisdeRef from '@pofo/click-outside';
@@ -55,7 +55,7 @@ const MyComponent = () => {
     }
 
     /* CLICKOUTSIDE REF */
-    const [ ref1, ref2 ] = useClickOutsideRef( onClick, {}, 2 );
+    const [ ref1, ref2 ] = useClickOutsideRef( onClick, { numRefs: 2 } );
 
     return (
         <div ref={ref1}>
@@ -98,18 +98,16 @@ useClickOutsideRef(
     onClick: () => void,
     // optional
     options: {
+        numRefs?: number,
         enableEscape?: boolean,
     },
-    // optional
-    numRefs: number,
 )
 ```
 
-| Parameter | Description |
-| ----------- | ----------- |
-| `onClick: () => void` | onClick function that gets called when user clicks off the component. By default, also gets called when user clicks the escape key | 
-`options: { enableEscape?: boolean; }` | Optional options object. enableEscape: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true. |
-`numRefs: number` | Specifies number of refs to return in the array.
+| Parameter | Default | Type | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| `onClick` | `REQUIRED` | `() => void`| onClick function that gets called when user clicks off the component. By default, also gets called when user clicks the escape key | 
+`options` | `{ numRefs: 1, enableEscape: true }` | `{ numRefs: number, enableEscape: boolean }` | Optional options object.<br/><br/> **numRefs**: Specifies the number of refs you would like returned.<br/><br/> **enableEscape**: When set to true, pressing the escape key *will trigger* the onClick function. If set to false, pressing the escape key *will not* trigger the onClick function. Defaults to true.
 
 ## Typescript
 You can specify what kind of HTML Element your ref is going to be attached to.
@@ -147,6 +145,10 @@ const MyComponent = () => {
 ```
 
 *IF YOU KNOW A BETTER WAY TO SUPPORT TYPESCRIPT, PLS HELP AND CREATE A PULL REQUEST*
+
+
+## Extra
+This library plays well with [useFocusTrap](https://github.com/pofoo/focus-trap)
 
 ## LICENSE
 MIT
